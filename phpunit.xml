@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+        bootstrap="vendor/autoload.php"
+        colors="true"
+        verbose="true">
+    <testsuite name="ICBF Webapp">
+        <directory suffix="Test.php">tests</directory>
+    </testsuite>
+
+    <logging>
+        <log type="coverage-html" target="tests/coverage"/>
+    </logging>
+
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">src</directory>
+        </whitelist>
+    </filter>
+</phpunit>
